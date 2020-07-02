@@ -16,4 +16,14 @@ function sdf_setup() {
     add_theme_support( 'align-wide' );
   }
   add_action( 'after_setup_theme', 'sdf_setup' );
+
+add_filter('gettext',  'translate_text');
+add_filter('ngettext',  'translate_text');
+
+function translate_text($translated) {
+        
+     $translated = str_ireplace('Read more',  'Lees verder',  $translated);
+        
+     return $translated;
+}
   
