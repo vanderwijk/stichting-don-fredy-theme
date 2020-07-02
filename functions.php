@@ -23,6 +23,8 @@ add_filter('ngettext',  'translate_text');
 function translate_text($translated) {
         
      $translated = str_ireplace('Read more',  'Lees verder',  $translated);
+      $translated = str_ireplace('All Rights Reserved',  'Alle rechten voorbehouden',  $translated);
+ 
         
      return $translated;
 }
